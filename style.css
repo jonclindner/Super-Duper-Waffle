@@ -11,11 +11,19 @@ body {
     flex-wrap: wrap
 }
 .plate {
-    background-color: wheat;
+   background-color: wheat;
     border-radius: 50%;  
     margin: auto; 
     width: 90px; 
     height: 90px;
     display: flex; 
     justify-items: center
-} 
+}
+
+.playerOne {
+    background-color: crimson;
+}
+
+.playerTwo {
+    background-color: blue;
+}
