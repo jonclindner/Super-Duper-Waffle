@@ -17,14 +17,17 @@ for (let i = 0; i < plates.length; i++) {
         // from: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
             plates[i].classList.add('playerOne')
             currentPlayer = 1
+            console.log(plates[i].id)
+            //https://stackoverflow.com/questions/27135846/how-to-print-a-value-in-console-log-base-on-id-of-an-element  How to access just the ID in an element.
             playGame()
-            console.log(currentPlayer)
+            
         }
         else if (currentPlayer === 1) {
             plates[i].classList.add('playerTwo')
             currentPlayer = 0 
+            console.log(plates[i].id)
             playGame() 
-            console.log(currentPlayer)
+            
         }
     }
 }
