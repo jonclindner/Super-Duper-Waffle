@@ -6,8 +6,10 @@
 
 //https://stackoverflow.com/questions/27135846/how-to-print-a-value-in-console-log-base-on-id-of-an-element  How to access just the ID in an element.
 
-//Renders the "playerOne" color to the selected plate
+//Renders the "playerOne" color to the selected plate and can be used to only select elements that have certain classes.
 // from: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 
 const plates = document.querySelectorAll('.plate')
 let currentPlayer = 0
@@ -21,48 +23,55 @@ for (let i = 0; i < plates.length; i++) {
             let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
             let belowSelectionY = playerSelection[0] - 1
             let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
-            
+            console.log(plates[i])
             
             if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
                 document.getElementById(`0,${x}`).classList.add('playerOne')
                 document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`1,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`1,${x}`).classList.add('playerOne')
                 document.getElementById(`1,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`2,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`2,${x}`).classList.add('playerOne')
                 document.getElementById(`2,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`3,${x}`).classList.add('playerOne')
                 document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`3,${x}`).classList.add('playerOne')
                 document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`4,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`4,${x}`).classList.add('playerOne')
                 document.getElementById(`4,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`5,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`5,${x}`).classList.add('playerOne')
                 document.getElementById(`5,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 1
+                checkWin()
                 playGame()
             }
             else {
@@ -115,48 +124,55 @@ for (let i = 0; i < plates.length; i++) {
             let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
             let belowSelectionY = playerSelection[0] - 1
             let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
-            
+            console.log(plates[i])
             
             if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
                 document.getElementById(`0,${x}`).classList.add('playerTwo')
                 document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`1,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`1,${x}`).classList.add('playerTwo')
                 document.getElementById(`1,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`2,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`2,${x}`).classList.add('playerTwo')
                 document.getElementById(`2,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`3,${x}`).classList.add('playerTwo')
                 document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`3,${x}`).classList.add('playerTwo')
                 document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`4,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`4,${x}`).classList.add('playerTwo')
                 document.getElementById(`4,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else if (!document.getElementById(`5,${x}`).classList.contains('alreadyPlayed')){
                 document.getElementById(`5,${x}`).classList.add('playerTwo')
                 document.getElementById(`5,${x}`).classList.add('alreadyPlayed')
                 currentPlayer = 0
+                checkWin()
                 playGame()
             }
             else {
@@ -170,4 +186,250 @@ for (let i = 0; i < plates.length; i++) {
 }
 
 playGame()
+
+const checkWin = () => {
+
+    if (document.getElementById(`0,0`).classList.contains('playerOne') && document.getElementById(`0,1`).classList.contains('playerOne') &&
+    document.getElementById(`0,2`).classList.contains('playerOne') && document.getElementById(`0,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`0,1`).classList.contains('playerOne') && document.getElementById(`0,2`).classList.contains('playerOne') &&
+    document.getElementById(`0,3`).classList.contains('playerOne') && document.getElementById(`0,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`0,2`).classList.contains('playerOne') && document.getElementById(`0,3`).classList.contains('playerOne') &&
+    document.getElementById(`0,4`).classList.contains('playerOne') && document.getElementById(`0,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`0,3`).classList.contains('playerOne') && document.getElementById(`0,4`).classList.contains('playerOne') &&
+    document.getElementById(`0,5`).classList.contains('playerOne') && document.getElementById(`0,6`).classList.contains('playerOne') 
+    ||
+    document.getElementById(`1,0`).classList.contains('playerOne') && document.getElementById(`1,1`).classList.contains('playerOne') &&
+    document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,1`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
+    document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') &&
+    document.getElementById(`1,4`).classList.contains('playerOne') && document.getElementById(`1,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') &&
+    document.getElementById(`1,5`).classList.contains('playerOne') && document.getElementById(`1,6`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,0`).classList.contains('playerOne') && document.getElementById(`2,1`).classList.contains('playerOne') &&
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`2,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,1`).classList.contains('playerOne') && document.getElementById(`2,2`).classList.contains('playerOne') &&
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`2,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`2,3`).classList.contains('playerOne') &&
+    document.getElementById(`2,4`).classList.contains('playerOne') && document.getElementById(`2,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`2,4`).classList.contains('playerOne') &&
+    document.getElementById(`2,5`).classList.contains('playerOne') && document.getElementById(`2,6`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`3,0`).classList.contains('playerOne') && document.getElementById(`3,1`).classList.contains('playerOne') &&
+    document.getElementById(`3,2`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`3,1`).classList.contains('playerOne') && document.getElementById(`3,2`).classList.contains('playerOne') &&
+    document.getElementById(`3,3`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`3,2`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne') &&
+    document.getElementById(`3,4`).classList.contains('playerOne') && document.getElementById(`3,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`3,3`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne') &&
+    document.getElementById(`3,5`).classList.contains('playerOne') && document.getElementById(`3,6`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`4,0`).classList.contains('playerOne') && document.getElementById(`4,1`).classList.contains('playerOne') &&
+    document.getElementById(`4,2`).classList.contains('playerOne') && document.getElementById(`4,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`4,1`).classList.contains('playerOne') && document.getElementById(`4,2`).classList.contains('playerOne') &&
+    document.getElementById(`4,3`).classList.contains('playerOne') && document.getElementById(`4,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`4,2`).classList.contains('playerOne') && document.getElementById(`4,3`).classList.contains('playerOne') &&
+    document.getElementById(`4,4`).classList.contains('playerOne') && document.getElementById(`4,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`4,3`).classList.contains('playerOne') && document.getElementById(`4,4`).classList.contains('playerOne') &&
+    document.getElementById(`4,5`).classList.contains('playerOne') && document.getElementById(`4,6`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`5,0`).classList.contains('playerOne') && document.getElementById(`5,1`).classList.contains('playerOne') &&
+    document.getElementById(`5,2`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`5,1`).classList.contains('playerOne') && document.getElementById(`5,2`).classList.contains('playerOne') &&
+    document.getElementById(`5,3`).classList.contains('playerOne') && document.getElementById(`5,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`5,2`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne') &&
+    document.getElementById(`5,4`).classList.contains('playerOne') && document.getElementById(`5,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`5,3`).classList.contains('playerOne') && document.getElementById(`5,4`).classList.contains('playerOne') &&
+    document.getElementById(`5,5`).classList.contains('playerOne') && document.getElementById(`5,6`).classList.contains('playerOne')
+    // ******* ALL HORIZONTAL POSSIBILITIES ABOVE ************
+    || 
+    document.getElementById(`0,0`).classList.contains('playerOne') && document.getElementById(`1,0`).classList.contains('playerOne') &&
+    document.getElementById(`2,0`).classList.contains('playerOne') && document.getElementById(`3,0`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,0`).classList.contains('playerOne') && document.getElementById(`2,0`).classList.contains('playerOne') &&
+    document.getElementById(`3,0`).classList.contains('playerOne') && document.getElementById(`4,0`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,0`).classList.contains('playerOne') && document.getElementById(`3,0`).classList.contains('playerOne') &&
+    document.getElementById(`4,0`).classList.contains('playerOne') && document.getElementById(`5,0`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,1`).classList.contains('playerOne') && document.getElementById(`1,1`).classList.contains('playerOne') &&
+    document.getElementById(`2,1`).classList.contains('playerOne') && document.getElementById(`3,1`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,1`).classList.contains('playerOne') && document.getElementById(`2,1`).classList.contains('playerOne') &&
+    document.getElementById(`3,1`).classList.contains('playerOne') && document.getElementById(`4,1`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,1`).classList.contains('playerOne') && document.getElementById(`3,1`).classList.contains('playerOne') &&
+    document.getElementById(`4,1`).classList.contains('playerOne') && document.getElementById(`5,1`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,2`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`3,2`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`2,2`).classList.contains('playerOne') &&
+    document.getElementById(`3,2`).classList.contains('playerOne') && document.getElementById(`4,2`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`3,2`).classList.contains('playerOne') &&
+    document.getElementById(`4,2`).classList.contains('playerOne') && document.getElementById(`5,2`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,3`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') &&
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`2,3`).classList.contains('playerOne') &&
+    document.getElementById(`3,3`).classList.contains('playerOne') && document.getElementById(`4,3`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne') &&
+    document.getElementById(`4,3`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,4`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') &&
+    document.getElementById(`2,4`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,4`).classList.contains('playerOne') && document.getElementById(`2,4`).classList.contains('playerOne') &&
+    document.getElementById(`3,4`).classList.contains('playerOne') && document.getElementById(`4,4`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,4`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne') &&
+    document.getElementById(`4,4`).classList.contains('playerOne') && document.getElementById(`5,4`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,5`).classList.contains('playerOne') && document.getElementById(`1,5`).classList.contains('playerOne') &&
+    document.getElementById(`2,5`).classList.contains('playerOne') && document.getElementById(`3,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,5`).classList.contains('playerOne') && document.getElementById(`2,5`).classList.contains('playerOne') &&
+    document.getElementById(`3,5`).classList.contains('playerOne') && document.getElementById(`4,5`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,5`).classList.contains('playerOne') && document.getElementById(`3,5`).classList.contains('playerOne') &&
+    document.getElementById(`4,5`).classList.contains('playerOne') && document.getElementById(`5,5`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,6`).classList.contains('playerOne') && document.getElementById(`1,6`).classList.contains('playerOne') &&
+    document.getElementById(`2,6`).classList.contains('playerOne') && document.getElementById(`3,6`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`1,6`).classList.contains('playerOne') && document.getElementById(`2,6`).classList.contains('playerOne') &&
+    document.getElementById(`3,6`).classList.contains('playerOne') && document.getElementById(`4,6`).classList.contains('playerOne') 
+    || 
+    document.getElementById(`2,6`).classList.contains('playerOne') && document.getElementById(`3,6`).classList.contains('playerOne') &&
+    document.getElementById(`4,6`).classList.contains('playerOne') && document.getElementById(`5,6`).classList.contains('playerOne')
+    // ********* ALL VERTICAL COMBINATIONS ABOVE
+    || 
+    document.getElementById(`0,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') &&
+    document.getElementById(`2,5`).classList.contains('playerOne') && document.getElementById(`3,6`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,2`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') &&
+    document.getElementById(`2,4`).classList.contains('playerOne') && document.getElementById(`3,5`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`2,4`).classList.contains('playerOne') &&
+    document.getElementById(`3,5`).classList.contains('playerOne') && document.getElementById(`4,6`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,1`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`2,3`).classList.contains('playerOne') &&
+    document.getElementById(`3,4`).classList.contains('playerOne') && document.getElementById(`4,5`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne') &&
+    document.getElementById(`4,5`).classList.contains('playerOne') && document.getElementById(`5,6`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,0`).classList.contains('playerOne') && document.getElementById(`1,1`).classList.contains('playerOne') &&
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,1`).classList.contains('playerOne') && document.getElementById(`2,2`).classList.contains('playerOne') &&
+    document.getElementById(`3,3`).classList.contains('playerOne') && document.getElementById(`4,4`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne') &&
+    document.getElementById(`4,4`).classList.contains('playerOne') && document.getElementById(`5,5`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,0`).classList.contains('playerOne') && document.getElementById(`2,1`).classList.contains('playerOne') &&
+    document.getElementById(`3,2`).classList.contains('playerOne') && document.getElementById(`4,3`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,1`).classList.contains('playerOne') && document.getElementById(`3,2`).classList.contains('playerOne') &&
+    document.getElementById(`4,3`).classList.contains('playerOne') && document.getElementById(`5,4`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,0`).classList.contains('playerOne') && document.getElementById(`3,1`).classList.contains('playerOne') &&
+    document.getElementById(`4,2`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne')
+    // ******** ALL BL TO TR DIAGONAL COMBINATIONS **********
+    || 
+    document.getElementById(`0,3`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
+    document.getElementById(`2,1`).classList.contains('playerOne') && document.getElementById(`3,0`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,4`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') &&
+    document.getElementById(`2,2`).classList.contains('playerOne') && document.getElementById(`3,1`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`2,2`).classList.contains('playerOne') &&
+    document.getElementById(`3,1`).classList.contains('playerOne') && document.getElementById(`4,0`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,5`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') &&
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`3,2`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,4`).classList.contains('playerOne') && document.getElementById(`2,3`).classList.contains('playerOne') &&
+    document.getElementById(`3,2`).classList.contains('playerOne') && document.getElementById(`4,1`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,3`).classList.contains('playerOne') && document.getElementById(`3,2`).classList.contains('playerOne') &&
+    document.getElementById(`4,1`).classList.contains('playerOne') && document.getElementById(`5,0`).classList.contains('playerOne')
+    || 
+    document.getElementById(`0,6`).classList.contains('playerOne') && document.getElementById(`1,5`).classList.contains('playerOne') &&
+    document.getElementById(`2,4`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,5`).classList.contains('playerOne') && document.getElementById(`2,4`).classList.contains('playerOne') &&
+    document.getElementById(`3,3`).classList.contains('playerOne') && document.getElementById(`4,2`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,4`).classList.contains('playerOne') && document.getElementById(`3,3`).classList.contains('playerOne') &&
+    document.getElementById(`4,2`).classList.contains('playerOne') && document.getElementById(`5,1`).classList.contains('playerOne')
+    || 
+    document.getElementById(`1,6`).classList.contains('playerOne') && document.getElementById(`2,5`).classList.contains('playerOne') &&
+    document.getElementById(`3,4`).classList.contains('playerOne') && document.getElementById(`4,3`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,5`).classList.contains('playerOne') && document.getElementById(`3,4`).classList.contains('playerOne') &&
+    document.getElementById(`4,3`).classList.contains('playerOne') && document.getElementById(`5,2`).classList.contains('playerOne')
+    || 
+    document.getElementById(`2,6`).classList.contains('playerOne') && document.getElementById(`3,5`).classList.contains('playerOne') &&
+    document.getElementById(`4,4`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne')
+
+
+    
+     
+    // document.getElementById(`1,0`).classList.contains('playerOne') && document.getElementById(`1,1`).classList.contains('playerOne') &&
+    // document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') 
+    // || 
+    // document.getElementById(`1,1`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
+    // document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') 
+    ) {
+    alert ("player one wins!")
+    }
+
+    else if (document.getElementById(`0,0`).classList.contains('playerTwo') && document.getElementById(`0,1`).classList.contains('playerTwo') &&
+    document.getElementById(`0,2`).classList.contains('playerTwo') && document.getElementById(`0,3`).classList.contains('playerTwo') 
+    || 
+    document.getElementById(`0,1`).classList.contains('playerTwo') && document.getElementById(`0,2`).classList.contains('playerTwo') &&
+    document.getElementById(`0,3`).classList.contains('playerTwo') && document.getElementById(`0,4`).classList.contains('playerTwo') 
+    || 
+    document.getElementById(`0,2`).classList.contains('playerTwo') && document.getElementById(`0,3`).classList.contains('playerTwo') &&
+    document.getElementById(`0,4`).classList.contains('playerTwo') && document.getElementById(`0,5`).classList.contains('playerTwo') 
+    || 
+    document.getElementById(`0,3`).classList.contains('playerTwo') && document.getElementById(`0,4`).classList.contains('playerTwo') &&
+    document.getElementById(`0,5`).classList.contains('playerTwo') && document.getElementById(`0,6`).classList.contains('playerTwo') 
+    // || 
+    // document.getElementById(`1,0`).classList.contains('playerOne') && document.getElementById(`1,1`).classList.contains('playerOne') &&
+    // document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') 
+    // || 
+    // document.getElementById(`1,1`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
+    // document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') 
+    ){
+    alert ("player two wins!")
+    }
+}
 
