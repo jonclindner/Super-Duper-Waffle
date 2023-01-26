@@ -17,16 +17,24 @@
 //https://stackoverflow.com/questions/15860683/onclick-event-in-a-for-loop
 //used to insert an onclick event handler into a for loop
 
+//https://www.vhv.rs/viewpic/iJmmiwh_waffle-png-transparent-background-waffle-clipart-png-download/#
 
-
+//https://www.foodnetwork.com/recipes/food-network-kitchen/coffee-glazed-bacon-with-eggs-recipe-2106198
 
 const plates = document.querySelectorAll('.plate')
 let currentPlayer = (Math.round(Math.random()))
 const displayPlayer = () => {
-
+    if (currentPlayer === 0) {
+        document.getElementById(`p1`).innerText = 'Waffles Go First!'
+    }
+    if (currentPlayer === 1) {
+        document.getElementById(`p1`).innerText = 'Eggs Go First!'
+    }
+}
 const playGame = () => {
 for (let i = 0; i < plates.length; i++) {
     plates[i].onclick = () => {
+        document.getElementById(`p1`).innerText = ''
         // plates[i].addEventListener('click', () => {
         if (currentPlayer === 0) {
             
@@ -589,7 +597,7 @@ const checkWin = () => {
 
 
     ){
-    alert ("player two wins!")
+        document.getElementById(`p1`).innerHTML = 'Player Two Wins!'
     }
 }
 

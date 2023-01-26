@@ -21,21 +21,33 @@ body {
 }
 
 .playerOne {
-    background-color: crimson;
+    background-image: url(images/waffle\ stack.png);
+    border-radius: 50%;  
+    margin: auto; 
+    width: 90px; 
+    height: 90px;
 }
 
 .playerTwo {
-    background-color: blue;
+    background-image: url(images/eggs\ and\ bacon.png);
+    border-radius: 50%;  
+    margin: auto; 
+    width: 90px; 
+    height: 90px;
 }
 
-.darkMode {
-    background-color: darkslategrey;
-}
 
 .players {
-    color: black;
+    font-size: 50px;
+    color: black; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
 
 .currPlayer {
     color: black;
+}
+.darkMode {
+    background-color: #121212;
+    color: whitesmoke
 }
