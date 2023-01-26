@@ -23,13 +23,7 @@
 const plates = document.querySelectorAll('.plate')
 let currentPlayer = (Math.round(Math.random()))
 const displayPlayer = () => {
-    if (currentPlayer === 0) {
-        document.getElementById(`p1`).innerHTML = 'Player One Goes First!'
-    }
-    if (currentPlayer === 1) {
-        document.getElementById(`p2`).innerHTML = 'Player Two Goes First!'
-    }
-}
+
 const playGame = () => {
 for (let i = 0; i < plates.length; i++) {
     plates[i].onclick = () => {
