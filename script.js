@@ -23,8 +23,7 @@ for (let i = 0; i < plates.length; i++) {
             let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
             let belowSelectionY = playerSelection[0] - 1
             let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
-            console.log(plates[i])
-            
+          
             if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
                 document.getElementById(`0,${x}`).classList.add('playerOne')
                 document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
@@ -77,46 +76,7 @@ for (let i = 0; i < plates.length; i++) {
             else {
                 alert("That table is full.")
             }
-
-
-            
-            //     if (document.getElementById(`${x},0`).classList.conatains('alreadyPlayed')) {
-            //     document.getElementById(`${x},0`).classList.add('playerOne')
-            //     currentPlayer = 1
-            // }
-            // else {
-            //     console.log("IT WAS ELSE")
-            //     document.getElementById(`${x},0`).classList.add('playerOne')
-            //     currentPlayer = 1
-            // }
-            
-
-
-                // plates[i].classList.add('playerOne')
-                // // document.getElementById(`0,${y}`).classList.add('playerOne')
-                // // document.getElementById('0,0').classList.add('alreadyPlayed')
-                // currentPlayer = 1
-                // // console.log(document.getElementById(`${x},0`))
-                // console.log(document.getElementById(`${x},0`))
-            
-           
-            // }
-
-            // console.log("playerSelection " + playerSelection)
-            // console.log("belowSelection " + belowSelection)
-            // console.log(document.getElementById(belowSelection))
-            
-            // plates[i].classList.add('playerOne')
-            // currentPlayer = 1 **** moved to y === x statements
-            // console.log(plates[i])
-            // console.log("plates[i].id " + plates[i].id)
-            // console.log("plates[i].class " + plates[i].className)
-            // console.log(x)
-            // console.log(y)
-            // console.log(`document.getElementById("plates[i].id") ` + document.getElementById("plates[i].id"))
-            
-            
-            
+   
         }
         else if (currentPlayer === 1) {
             let playerSelection = plates[i].id.split(",") // splits coordinate string 
@@ -124,7 +84,7 @@ for (let i = 0; i < plates.length; i++) {
             let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
             let belowSelectionY = playerSelection[0] - 1
             let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
-            console.log(plates[i])
+           
             
             if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
                 document.getElementById(`0,${x}`).classList.add('playerTwo')
@@ -399,19 +359,9 @@ const checkWin = () => {
     document.getElementById(`2,6`).classList.contains('playerOne') && document.getElementById(`3,5`).classList.contains('playerOne') &&
     document.getElementById(`4,4`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne')
      // ******** ALL BR TO TL DIAGONAL COMBINATIONS **********
-
-
-    
-     
-    // document.getElementById(`1,0`).classList.contains('playerOne') && document.getElementById(`1,1`).classList.contains('playerOne') &&
-    // document.getElementById(`1,2`).classList.contains('playerOne') && document.getElementById(`1,3`).classList.contains('playerOne') 
-    // || 
-    // document.getElementById(`1,1`).classList.contains('playerOne') && document.getElementById(`1,2`).classList.contains('playerOne') &&
-    // document.getElementById(`1,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') 
     ) {
     alert ("player one wins!")
     }
-
     else if (document.getElementById(`0,0`).classList.contains('playerTwo') && document.getElementById(`0,1`).classList.contains('playerTwo') &&
     document.getElementById(`0,2`).classList.contains('playerTwo') && document.getElementById(`0,3`).classList.contains('playerTwo') 
     || 
