@@ -11,6 +11,15 @@
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
 
+//https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click 
+// Used "<button onClick="window.location.reload();">Refresh Page</button>" in HTML to reset page
+
+//https://stackoverflow.com/questions/15860683/onclick-event-in-a-for-loop
+//used to insert an onclick event handler into a for loop
+
+
+
+
 const plates = document.querySelectorAll('.plate')
 let currentPlayer = 0
 
