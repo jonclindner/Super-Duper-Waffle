@@ -16,7 +16,8 @@ let currentPlayer = 0
 
 const playGame = () => {
 for (let i = 0; i < plates.length; i++) {
-    plates[i].onclick = () => {
+    // plates[i].onclick = () => {
+        plates[i].addEventListener('click', () => {
         if (currentPlayer === 0) {
             let playerSelection = plates[i].id.split(",") // splits coordinate string 
             let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
@@ -141,8 +142,8 @@ for (let i = 0; i < plates.length; i++) {
             }
             
         }
-    }
-}
+        }
+)}
 }
 
 playGame()
@@ -579,3 +580,8 @@ const checkWin = () => {
     }
 }
 
+const changeClass = () => {
+    document.body.classList.toggle('darkMode')
+  }
+  
+  btn.addEventListener('click', changeClass)

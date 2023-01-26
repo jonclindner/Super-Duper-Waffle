@@ -28,6 +28,6 @@ body {
     background-color: blue;
 }
 
-.mouseOver {
-    background-color: gray;
+.darkMode {
+    background-color: darkslategrey;
 }
