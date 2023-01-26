@@ -21,13 +21,21 @@
 
 
 const plates = document.querySelectorAll('.plate')
-let currentPlayer = 0
-
+let currentPlayer = (Math.round(Math.random()))
+const displayPlayer = () => {
+    if (currentPlayer === 0) {
+        document.getElementById(`p1`).innerHTML = 'Player One Goes First!'
+    }
+    if (currentPlayer === 1) {
+        document.getElementById(`p2`).innerHTML = 'Player Two Goes First!'
+    }
+}
 const playGame = () => {
 for (let i = 0; i < plates.length; i++) {
-    // plates[i].onclick = () => {
-        plates[i].addEventListener('click', () => {
+    plates[i].onclick = () => {
+        // plates[i].addEventListener('click', () => {
         if (currentPlayer === 0) {
+            
             let playerSelection = plates[i].id.split(",") // splits coordinate string 
             let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
             let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
@@ -89,6 +97,7 @@ for (let i = 0; i < plates.length; i++) {
    
         }
         else if (currentPlayer === 1) {
+            
             let playerSelection = plates[i].id.split(",") // splits coordinate string 
             let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
             let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
@@ -152,9 +161,10 @@ for (let i = 0; i < plates.length; i++) {
             
         }
         }
-)}
+// )
 }
-
+}
+displayPlayer()
 playGame()
 
 const checkWin = () => {

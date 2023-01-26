@@ -31,3 +31,11 @@ body {
 .darkMode {
     background-color: darkslategrey;
 }
+
+.players {
+    color: black;
+}
+
+.currPlayer {
+    color: black;
+}
