@@ -19,12 +19,47 @@ A connect 4 style game featuring various round breakfast items.
 6. Create an alert when a player wins
 7. Reset the board when a player wins
 8. Add a reset button to for mid-game restarts
-## *Screenshots* (Placeholders for later)
-###  
-![Dog Driving](https://external-preview.redd.it/KZsaI_fc2a_loZGRnLINXkDWlA1UtdnTD_M9UztYbD0.jpg?auto=webp&s=bcbe8394a24ac4aee3f400b86db755770d9262fa)
-### Image Header 2
-![Dog washing car](https://external-preview.redd.it/hXUOm3IxCt6J_L7KL550FVee4hM6zIkxWrgjhkvU1yU.jpg?auto=webp&s=91513707962cbffe28cf37b614b9c3844dfa4791)
+## *Screenshots:* 
+### Home page
+![Screenshot1](/images/Screenshot%202023-01-26%20at%207.57.13%20PM.png)
+### Game board in "dark mode"
+![Screenshot2](/images/Screenshot%202023-01-26%20at%207.58.08%20PM.png)
+### Game board in "light mode" after a player win.
+![Screenshot3](/images/Screenshot%202023-01-26%20at%207.58.44%20PM.png)
 
-## ***Credits***
-## Funny Image #1 [Dog Driving](https://www.reddit.com/r/funny/comments/rndev/dogs_doing_people_things_is_always_funny_always/)
-## Funny Image #2 [Dog Washing a Car](https://www.reddit.com/r/aww/comments/396ikv/dogs_doing_people_things/)
+
+# ***Credits***
+## Images:
+## Pixel Art Egg and Bacon gif [Justin Gammon on Dribbble.com](https://dribbble.com/shots/2091995-Bacon-and-Egg-Dancing)
+## Waffle Image (gamepiece) [In the Kitchen with Matt](https://www.inthekitchenwithmatt.com/homemade-belgian-waffles)
+## Egg, Bacon, & Toast Image (gamepiece) [Food Network](https://www.reddit.com/r/aww/comments/396ikv/dogs_doing_people_things/)
+## Sources
+
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// .split() takes strings and turns them into an ordered array. 
+
+//https://stackoverflow.com/questions/13272406/convert-string-with-commas-to-array
+//Another source to turn stings into arrays.
+
+//https://stackoverflow.com/questions/27135846/how-to-print-a-value-in-console-log-base-on-id-of-an-element  How to access just the ID in an element.
+
+//Renders the "playerOne" color to the selected plate and can be used to only select elements that have certain classes.
+// from: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+
+//https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click 
+// Used "<button onClick="window.location.reload();">Refresh Page</button>" in HTML to reset page
+
+//https://stackoverflow.com/questions/15860683/onclick-event-in-a-for-loop
+//used to insert an onclick event handler into a for loop
+
+
+
+//https://www.foodnetwork.com/recipes/food-network-kitchen/coffee-glazed-bacon-with-eggs-recipe-2106198
+//egg and bacon picture 
+//https://www.inthekitchenwithmatt.com/homemade-belgian-waffles
+//waffle picture
+
+//https://dribbble.com/shots/2091995-Bacon-and-Egg-Dancing
+//from user Justin Gammon

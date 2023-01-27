@@ -24,8 +24,13 @@
 //https://www.inthekitchenwithmatt.com/homemade-belgian-waffles
 //waffle picture
 
+//https://dribbble.com/shots/2091995-Bacon-and-Egg-Dancing
+//from user Justin Gammon
+
 const plates = document.querySelectorAll('.plate')
+
 let currentPlayer = (Math.round(Math.random()))
+
 const displayPlayer = () => {
     if (currentPlayer === 0) {
         document.getElementById(`p1`).innerText = 'Waffles Go First!'
@@ -35,146 +40,143 @@ const displayPlayer = () => {
     }
 }
 const playGame = () => {
-for (let i = 0; i < plates.length; i++) {
-    plates[i].onclick = () => {
-        document.getElementById(`p1`).innerText = ''
-        // plates[i].addEventListener('click', () => {
-        if (currentPlayer === 0) {
+    for (let i = 0; i < plates.length; i++) {
+        plates[i].onclick = () => {
+            document.getElementById(`p1`).innerHTML = '&#129479; &#127859; &#129479; &#127859; &#129479; &#127859; &#129479; &#127859;'
+            if (currentPlayer === 0) {
+                let playerSelection = plates[i].id.split(",") // splits coordinate string 
+                let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
+                let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
+                let belowSelectionY = playerSelection[0] - 1
+                let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
             
-            let playerSelection = plates[i].id.split(",") // splits coordinate string 
-            let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
-            let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
-            let belowSelectionY = playerSelection[0] - 1
-            let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
-          
-            if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
-                document.getElementById(`0,${x}`).classList.add('playerOne')
-                document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
+                if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
+                    document.getElementById(`0,${x}`).classList.add('playerOne')
+                    document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`1,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`1,${x}`).classList.add('playerOne')
+                    document.getElementById(`1,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`2,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`2,${x}`).classList.add('playerOne')
+                    document.getElementById(`2,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`3,${x}`).classList.add('playerOne')
+                    document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`3,${x}`).classList.add('playerOne')
+                    document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`4,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`4,${x}`).classList.add('playerOne')
+                    document.getElementById(`4,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`5,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`5,${x}`).classList.add('playerOne')
+                    document.getElementById(`5,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 1
+                    checkWin()
+                    playGame()
+                }
+                else {
+                    document.getElementById(`p1`).innerText = "That table is full."
+                }
+    
             }
-            else if (!document.getElementById(`1,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`1,${x}`).classList.add('playerOne')
-                document.getElementById(`1,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`2,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`2,${x}`).classList.add('playerOne')
-                document.getElementById(`2,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`3,${x}`).classList.add('playerOne')
-                document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`3,${x}`).classList.add('playerOne')
-                document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`4,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`4,${x}`).classList.add('playerOne')
-                document.getElementById(`4,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`5,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`5,${x}`).classList.add('playerOne')
-                document.getElementById(`5,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 1
-                checkWin()
-                playGame()
-            }
-            else {
-                alert("That table is full.")
-            }
-   
-        }
-        else if (currentPlayer === 1) {
+            else if (currentPlayer === 1) {
+                
+                let playerSelection = plates[i].id.split(",") // splits coordinate string 
+                let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
+                let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
+                let belowSelectionY = playerSelection[0] - 1
+                let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
             
-            let playerSelection = plates[i].id.split(",") // splits coordinate string 
-            let x = parseInt(playerSelection[1]) //*** Player-selected x coordinate as an integer ***
-            let y = parseInt(playerSelection[0]) //*** Player-selected y coordinate as an integer ***
-            let belowSelectionY = playerSelection[0] - 1
-            let belowSelection =  [playerSelection[1] , belowSelectionY].join(',')
-           
-            
-            if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
-                document.getElementById(`0,${x}`).classList.add('playerTwo')
-                document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
+                
+                if (!document.getElementById(`0,${x}`).classList.contains('alreadyPlayed')) {
+                    document.getElementById(`0,${x}`).classList.add('playerTwo')
+                    document.getElementById(`0,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`1,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`1,${x}`).classList.add('playerTwo')
+                    document.getElementById(`1,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`2,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`2,${x}`).classList.add('playerTwo')
+                    document.getElementById(`2,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`3,${x}`).classList.add('playerTwo')
+                    document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`3,${x}`).classList.add('playerTwo')
+                    document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`4,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`4,${x}`).classList.add('playerTwo')
+                    document.getElementById(`4,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else if (!document.getElementById(`5,${x}`).classList.contains('alreadyPlayed')){
+                    document.getElementById(`5,${x}`).classList.add('playerTwo')
+                    document.getElementById(`5,${x}`).classList.add('alreadyPlayed')
+                    currentPlayer = 0
+                    checkWin()
+                    playGame()
+                }
+                else {
+                    document.getElementById(`p1`).innerText = "That table is full."
+                    playGame()
+                }
+                
             }
-            else if (!document.getElementById(`1,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`1,${x}`).classList.add('playerTwo')
-                document.getElementById(`1,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
             }
-            else if (!document.getElementById(`2,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`2,${x}`).classList.add('playerTwo')
-                document.getElementById(`2,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`3,${x}`).classList.add('playerTwo')
-                document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`3,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`3,${x}`).classList.add('playerTwo')
-                document.getElementById(`3,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`4,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`4,${x}`).classList.add('playerTwo')
-                document.getElementById(`4,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
-            }
-            else if (!document.getElementById(`5,${x}`).classList.contains('alreadyPlayed')){
-                document.getElementById(`5,${x}`).classList.add('playerTwo')
-                document.getElementById(`5,${x}`).classList.add('alreadyPlayed')
-                currentPlayer = 0
-                checkWin()
-                playGame()
-            }
-            else {
-                alert("That table is full.")
-                playGame()
-            }
-            
-        }
-        }
-// )
 }
 }
 displayPlayer()
 playGame()
 
 const checkWin = () => {
-
-    if (document.getElementById(`0,0`).classList.contains('playerOne') && document.getElementById(`0,1`).classList.contains('playerOne') &&
+    if (
+    document.getElementById(`0,0`).classList.contains('playerOne') && document.getElementById(`0,1`).classList.contains('playerOne') &&
     document.getElementById(`0,2`).classList.contains('playerOne') && document.getElementById(`0,3`).classList.contains('playerOne') 
     || 
     document.getElementById(`0,1`).classList.contains('playerOne') && document.getElementById(`0,2`).classList.contains('playerOne') &&
@@ -309,7 +311,7 @@ const checkWin = () => {
     || 
     document.getElementById(`2,6`).classList.contains('playerOne') && document.getElementById(`3,6`).classList.contains('playerOne') &&
     document.getElementById(`4,6`).classList.contains('playerOne') && document.getElementById(`5,6`).classList.contains('playerOne')
-    // ********* ALL VERTICAL COMBINATIONS ABOVE
+    // ********* ALL VERTICAL COMBINATIONS ABOVE ***********
     || 
     document.getElementById(`0,3`).classList.contains('playerOne') && document.getElementById(`1,4`).classList.contains('playerOne') &&
     document.getElementById(`2,5`).classList.contains('playerOne') && document.getElementById(`3,6`).classList.contains('playerOne')
@@ -387,7 +389,8 @@ const checkWin = () => {
     ) {
         document.getElementById(`p1`).innerHTML = 'Waffles Win!'
     }
-    else if (document.getElementById(`0,0`).classList.contains('playerTwo') && document.getElementById(`0,1`).classList.contains('playerTwo') &&
+    else if (
+    document.getElementById(`0,0`).classList.contains('playerTwo') && document.getElementById(`0,1`).classList.contains('playerTwo') &&
     document.getElementById(`0,2`).classList.contains('playerTwo') && document.getElementById(`0,3`).classList.contains('playerTwo') 
     || 
     document.getElementById(`0,1`).classList.contains('playerTwo') && document.getElementById(`0,2`).classList.contains('playerTwo') &&
@@ -606,6 +609,7 @@ const checkWin = () => {
 
 const changeClass = () => {
     document.body.classList.toggle('darkMode')
+    document.getElementById('gameboard').classList.toggle('darkMode')
   }
   
   darkMode.addEventListener('click', changeClass)
