@@ -8,13 +8,33 @@
 
 ***
 ### ***Description:***
-### *Super-Duper Waffle* is a browser-based game which utilizes JavaScript, CSS, & HTML to create a two-player, connect 4-style game that allows users to battle with various breakfast dishes.  
-### This projects was created to gain experience using the technologies listed above.
+### *Super-Duper Waffle* is a browser-based application which utilizes JavaScript, CSS, & HTML to create a two-player, connect 4-style game that allows users to battle with various breakfast dishes.  
+### This projects was created to gain experience using the technologies listed below.
+***
+### ***Technologies Used***
+* HTML
+* CSS
+* JavaScript
+
 ***
 ### ***Getting Started***
 1. Upon loading the home page, the users will read the basic instrucitons below the dancing bacon and egg gif. 
 2. Upon clicking the "Play!" button, the users will be taken to a separate page which constains the gameboard. 
-3. 
+3. On the gameboard page, the users should note which player has been selected to go first. Since this style of game is a [solved](https://en.wikipedia.org/wiki/Solved_game), the first player is selected at random.
+4. The selected player will have the option to click anywhere on the game board. Once an area is clicked, a gamepiece will appear in the lowest row of the selected column. 
+5. Gamepieces will "stack" on top of eachother if the if the spot below the selected area has already been played. 
+6. Once a player is able to connect four of their gamepieces (horizonally, vertically, or diagonally), the egg and waffle emojis at the top of the screen will change to a message displaying which player won the game. 
+    - Once a win is displayed, the users have a chance to review the board. When they would like to play again, they can select the "Reset Game" button to reset the board.
+    - Users can also select to return to the home page with the "Return to Home Page" button
+***
+### ***Technologies Used***
+* HTML
+* CSS
+* JavaScript
+
+
+
+
 ## *Screenshots:* 
 ### Home page
 ![Screenshot1](/images/Screenshot%202023-01-26%20at%207.57.13%20PM.png)
