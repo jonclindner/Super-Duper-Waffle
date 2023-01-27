@@ -38,7 +38,8 @@ body {
 
 
 .players {
-    font-size: 50px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
     color: black; 
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;

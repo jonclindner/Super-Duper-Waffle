@@ -20,6 +20,9 @@
 //https://www.vhv.rs/viewpic/iJmmiwh_waffle-png-transparent-background-waffle-clipart-png-download/#
 
 //https://www.foodnetwork.com/recipes/food-network-kitchen/coffee-glazed-bacon-with-eggs-recipe-2106198
+//egg and bacon picture 
+//https://www.inthekitchenwithmatt.com/homemade-belgian-waffles
+//waffle picture
 
 const plates = document.querySelectorAll('.plate')
 let currentPlayer = (Math.round(Math.random()))
@@ -382,7 +385,7 @@ const checkWin = () => {
     document.getElementById(`4,4`).classList.contains('playerOne') && document.getElementById(`5,3`).classList.contains('playerOne')
      // ******** ALL BR TO TL DIAGONAL COMBINATIONS **********
     ) {
-    alert ("player one wins!")
+        document.getElementById(`p1`).innerHTML = 'Waffles Win!'
     }
     else if (document.getElementById(`0,0`).classList.contains('playerTwo') && document.getElementById(`0,1`).classList.contains('playerTwo') &&
     document.getElementById(`0,2`).classList.contains('playerTwo') && document.getElementById(`0,3`).classList.contains('playerTwo') 
@@ -597,7 +600,7 @@ const checkWin = () => {
 
 
     ){
-        document.getElementById(`p1`).innerHTML = 'Player Two Wins!'
+        document.getElementById(`p1`).innerHTML = 'Eggs & Bacon Win!'
     }
 }
 
@@ -605,4 +608,4 @@ const changeClass = () => {
     document.body.classList.toggle('darkMode')
   }
   
-  btn.addEventListener('click', changeClass)
+  darkMode.addEventListener('click', changeClass)
