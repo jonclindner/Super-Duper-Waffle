@@ -1,4 +1,4 @@
-# Super-Duper-Waffle
+# Super-Duper Waffle
 A connect 4 style game featuring various round breakfast items. 
 
 ## January 22, 2023
@@ -27,39 +27,26 @@ A connect 4 style game featuring various round breakfast items.
 ### Game board in "light mode" after a player win.
 ![Screenshot3](/images/Screenshot%202023-01-26%20at%207.58.44%20PM.png)
 
-
+***
 # ***Credits***
-## Images:
+## ***Images:***
 ## Pixel Art Egg and Bacon gif [Justin Gammon on Dribbble.com](https://dribbble.com/shots/2091995-Bacon-and-Egg-Dancing)
 ## Waffle Image (gamepiece) [In the Kitchen with Matt](https://www.inthekitchenwithmatt.com/homemade-belgian-waffles)
 ## Egg, Bacon, & Toast Image (gamepiece) [Food Network](https://www.reddit.com/r/aww/comments/396ikv/dogs_doing_people_things/)
-## Sources
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-// .split() takes strings and turns them into an ordered array. 
 
-//https://stackoverflow.com/questions/13272406/convert-string-with-commas-to-array
-//Another source to turn stings into arrays.
-
-//https://stackoverflow.com/questions/27135846/how-to-print-a-value-in-console-log-base-on-id-of-an-element  How to access just the ID in an element.
-
-//Renders the "playerOne" color to the selected plate and can be used to only select elements that have certain classes.
-// from: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-
-//https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-
-//https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click 
-// Used "<button onClick="window.location.reload();">Refresh Page</button>" in HTML to reset page
-
-//https://stackoverflow.com/questions/15860683/onclick-event-in-a-for-loop
-//used to insert an onclick event handler into a for loop
+## ***Sources:***
+## Explaination of JavaScript String .split()  [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+## Instructions to convert a string to an array  [StackOverflow](https://stackoverflow.com/questions/13272406/convert-string-with-commas-to-array)
+## Instructions to access the ID of an element [StackOverflow](https://stackoverflow.com/questions/27135846/how-to-print-a-value-in-console-log-base-on-id-of-an-element)
+## Instructions to assign classes to elements [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList)
+## Instructions to reload a page with a click event [StackOverflow](https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click)
+## Instructions to insert an onClick event handler into a for loop [StackOverflow](https://stackoverflow.com/questions/15860683/onclick-event-in-a-for-loop)
 
 
 
-//https://www.foodnetwork.com/recipes/food-network-kitchen/coffee-glazed-bacon-with-eggs-recipe-2106198
-//egg and bacon picture 
-//https://www.inthekitchenwithmatt.com/homemade-belgian-waffles
-//waffle picture
 
-//https://dribbble.com/shots/2091995-Bacon-and-Egg-Dancing
-//from user Justin Gammon
+
+
+
+
