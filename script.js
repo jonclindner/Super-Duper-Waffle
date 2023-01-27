@@ -1,31 +1,4 @@
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
-// .split() takes strings and turns them into an ordered array. 
 
-//https://stackoverflow.com/questions/13272406/convert-string-with-commas-to-array
-//Another source to turn stings into arrays.
-
-//https://stackoverflow.com/questions/27135846/how-to-print-a-value-in-console-log-base-on-id-of-an-element  How to access just the ID in an element.
-
-//Renders the "playerOne" color to the selected plate and can be used to only select elements that have certain classes.
-// from: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-
-//https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-
-//https://stackoverflow.com/questions/29884654/button-that-refreshes-the-page-on-click 
-// Used "<button onClick="window.location.reload();">Refresh Page</button>" in HTML to reset page
-
-//https://stackoverflow.com/questions/15860683/onclick-event-in-a-for-loop
-//used to insert an onclick event handler into a for loop
-
-//https://www.vhv.rs/viewpic/iJmmiwh_waffle-png-transparent-background-waffle-clipart-png-download/#
-
-//https://www.foodnetwork.com/recipes/food-network-kitchen/coffee-glazed-bacon-with-eggs-recipe-2106198
-//egg and bacon picture 
-//https://www.inthekitchenwithmatt.com/homemade-belgian-waffles
-//waffle picture
-
-//https://dribbble.com/shots/2091995-Bacon-and-Egg-Dancing
-//from user Justin Gammon
 
 const plates = document.querySelectorAll('.plate')
 
